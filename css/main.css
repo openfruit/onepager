@@ -42,15 +42,22 @@ html, body {
     display: flex;
     position: fixed;
     margin: 0;
-    padding: 0.5em 3em 0.5em 3em;
+    padding: 1.5em 3em 1.5em 3em;
     width: calc(100% - 6em);
-    background-color: white;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-duration: 0.5s;
+}
+
+#nav-menu {
+    display: none;
+    margin: auto;
+    margin-right: 1em;
 }
 
 #nav-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: calc(100% - 6em);
     justify-content: space-between;
 }
 
@@ -62,24 +69,34 @@ html, body {
 .nav-link {
     display: flex;
     user-select: none;
-    padding: 1em 1em;
+    color: black;
+    padding: 1em 2em;
     margin: auto 0.5em;
     border-radius: 0.25em;
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition-duration: 0.5s;
+    transition-duration: 0.25s;
 }
 
 .nav-link:hover {
     cursor: pointer;
-    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
-    background-color: rgba(39, 122, 0, 0.75);
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(32,97,69,1);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(32,97,69,1);
+    box-shadow: 0px 3px 10px 0px rgba(32,97,69,1);
+    background-color: rgb(58, 175, 126);
     color: white;
 }
 
+.nav-link:active {
+    filter: brightness(0.9);
+}
+
 #navbar h1 {
-    letter-spacing: 12px;
+    color: black;
+    letter-spacing: 5px;
+}
+
+.headerScroll {
+    color: white !important;
 }
 
 .section {
@@ -91,16 +108,24 @@ html, body {
 #section-1 {
     display: flex;
     flex-direction: row;
-    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom, rgba(58, 175, 126,1), rgba(255, 255, 255,0));
+    padding-top: 3em;
+    height: calc(100% - 3em);
+}
+
+#section-2 {
+
 }
 
 #hero-text {
+    text-align: center;
     display: flex;
     width: 50%;
     height: 100%;
 }
 
 #hero-text #hero-text-container {
+    padding: 0 2em;
     margin: auto;
 }
 
@@ -108,4 +133,79 @@ html, body {
     width: 50%;
     height: 100%;
     display: flex;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 3em;
+    background-color: rgb(58, 175, 126);
+}
+
+footer p {
+    margin: auto;
+    letter-spacing: 2px;
+    font-size: 10pt;
+    color: white;
+}
+
+@media screen and (max-width: 991px) {
+    .section {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+    }
+
+    #section-1 {
+        display: block;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom, rgba(58, 175, 126,1), rgba(255, 255, 255,0));
+        padding: 5em 0;
+    }
+
+    #hero-text {
+        text-align: center;
+        display: flex;
+        width: 100vw;
+        height: auto;
+    }
+
+    #hero-video {
+        display: flex;
+        flex: 1 1 auto;
+        width: 100vw;
+        height: auto;
+        margin-bottom: 5em;
+    }
+
+    #phone-container {
+        user-select: none;
+        position: relative;
+        margin: auto;
+        zoom: 0.75;
+    }
+
+    #navbar {
+        z-index: 10;
+        display: flex;
+        position: fixed;
+        margin: 0;
+        background-color: white;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        width: calc(100% - 1em);
+    }
+
+    #nav-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #navbar h1 {
+        zoom: 0.7;
+        letter-spacing: 1px;
+        margin: 0;
+        padding: 1em;
+    }
 }
