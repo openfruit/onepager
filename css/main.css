@@ -1,0 +1,111 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+#phone-container {
+    user-select: none;
+    position: relative;
+    margin: auto;
+}
+
+#phone-front {
+    position: relative;
+    z-index: 5;
+    width: 360px;
+    height: auto;
+}
+
+#phone-video {
+    position: absolute;
+    display: flex;
+    top: 0.95em;
+    left: 0.8em;
+    width: 334px;
+    height: auto;
+}
+
+#phone-shadow {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: auto;
+}
+
+#navbar {
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    margin: 0;
+    padding: 0.5em 3em 0.5em 3em;
+    width: calc(100% - 6em);
+    background-color: white;
+}
+
+#nav-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#nav-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-link {
+    display: flex;
+    user-select: none;
+    padding: 1em 1em;
+    margin: auto 0.5em;
+    border-radius: 0.25em;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-duration: 0.5s;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
+    background-color: rgba(39, 122, 0, 0.75);
+    color: white;
+}
+
+#navbar h1 {
+    letter-spacing: 12px;
+}
+
+.section {
+    width: calc(100% - 12em);
+    height: 100%;
+    padding: 0 6em;
+}
+
+#section-1 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+}
+
+#hero-text {
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+#hero-text #hero-text-container {
+    margin: auto;
+}
+
+#hero-video {
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
