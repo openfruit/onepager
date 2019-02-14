@@ -4,6 +4,8 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', 'Helvetica', sans-serif;
+    user-select: none;
+    scroll-behavior: smooth;
 }
 
 .swiper-container {
@@ -234,6 +236,16 @@ footer div p {
         flex-direction: column;
     }
 
+    .swiper-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .swiper-pagination {
+        position: relative !important;
+        padding-top: 3em;
+    }
+
     .swiper-slide-container {
         flex-direction: column;
     }
@@ -247,7 +259,6 @@ footer div p {
         width: 100%;
         display: block;
         padding: 0;
-        padding-bottom: 3.5em;
     }
 
     .slide-img {
