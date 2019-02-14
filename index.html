@@ -9,12 +9,18 @@
         <link rel="stylesheet" href="css/main.css">
 
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
     </head>
     <body>
         <nav id="navbar">
             <div id="nav-container">
-                <div>
-                    <h1 id="nav-brand">OPENFRUIT</h1>
+                <div id="nav-logo-toggle">
+                    <div>
+                        <h1 id="nav-brand">OPENFRUIT</h1>
+                    </div>
+                    <i id="nav-menu" class="fas fa-bars"></i>
                 </div>
                 <div id="nav-links">
                     <p class="nav-link">Übersicht</p>
@@ -23,7 +29,6 @@
                     <p class="nav-link">Über uns</p>
                     <p class="nav-link">Download</p>
                 </div>
-                <i id="nav-menu" class="fas fa-bars"></i>
             </div>
         </nav>
         <div class="section" id="section-1">
@@ -37,8 +42,8 @@
                     <h3>herzugeben anstatt wegzuschmeißen</h3>
                 </div>
             </div>
-            <div id="hero-video">
-                <div id="phone-container" data-aos="fade-up" data-aos-duration="1000">
+            <div id="hero-video" data-aos="fade-up" data-aos-duration="1000">
+                <div id="phone-container">
                     <img id="phone-front" src="img/phone-mockup/phone-mockup-no-shadow.png" draggable="false">
                     <img id="phone-shadow" src="img/phone-mockup/phone-mockup-shadow-only.png" draggable="false">
                     <video id="phone-video" autoplay loop muted>
@@ -49,12 +54,39 @@
             </div>
         </div>
         <div class="section" id="section-2">
-
+        <!-- Slider main container -->
+        <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <h1>Test</h1>
+                    </div>
+                    <div class="swiper-slide">
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        
+                    </div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
         <footer>
-            <p>© Samuel Haim - Thomas Kröpfl - David Kuntner - Fabian Spescha</p>
+            <div id="footer-left">
+                <p>© Samuel Haim - Thomas Kröpfl - David Kuntner - Fabian Spescha</p>
+            </div>
+            <div>
+                <p>Made with much <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+            </div>
         </footer>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+
         <script src="js/main.js"></script>
     </body>
 </html>
