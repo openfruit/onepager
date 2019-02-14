@@ -1,5 +1,23 @@
 AOS.init();
 
+const navMenuButton1 = document.getElementById('nav-link-1');
+const navMenuButton2 = document.getElementById('nav-link-2');
+const navMenuButton3 = document.getElementById('nav-link-3');
+const navMenuButton4 = document.getElementById('nav-link-4');
+const navMenuButton5 = document.getElementById('nav-link-5');
+
+navMenuButton1.onclick = () => {
+    document.querySelector('#section-1').scrollIntoView({
+        behavior: 'smooth'
+    })
+};
+
+navMenuButton2.onclick = () => {
+    document.querySelector('#section-2').scrollIntoView({
+        behavior: 'smooth'
+    })
+};
+
 let navMenuToggled = false;
 
 const navMenuButton = document.getElementById('nav-menu');
