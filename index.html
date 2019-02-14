@@ -17,7 +17,7 @@
         <nav id="navbar">
             <div id="nav-container">
                 <div id="nav-logo-toggle">
-                    <div>
+                    <div style="display: flex">
                         <h1 id="nav-brand">OPENFRUIT</h1>
                     </div>
                     <i id="nav-menu" class="fas fa-bars"></i>
@@ -34,12 +34,9 @@
         <div class="section" id="section-1">
             <div id="hero-text">
                 <div id="hero-text-container" data-aos="fade-up" data-aos-duration="1000">
-                    <h1>OPENFRUIT ist unsere App</h1>
-                    <h1>für ein vernetzteres Dornbirn</h1>
+                    <h1>OPENFRUIT ist unsere App für ein vernetzteres Dornbirn</h1>
                     <span>___________________</span>
-                    <h3>Wir wollen den Menschen den Anstoß geben</h3>
-                    <h3>mehr für ihre Umwelt zu tun und nicht benötigtes Essen</h3>
-                    <h3>herzugeben anstatt wegzuschmeißen</h3>
+                    <h3>Wir wollen den Menschen den Anstoß geben <br><br> mehr für ihre Umwelt zu tun und nicht benötigtes Essen <br><br> herzugeben anstatt wegzuwerfen!</h3>
                 </div>
             </div>
             <div id="hero-video" data-aos="fade-up" data-aos-duration="1000">
@@ -55,31 +52,57 @@
         </div>
         <div class="section" id="section-2">
         <!-- Slider main container -->
-        <div class="swiper-container">
+        <div class="swiper-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <h1>Test</h1>
+                        <div class="swiper-slide-container">
+                            <div class="swiper-slide-leftarea">
+                                <div style="margin: auto">
+                                    <h1>Warum gutes Essen wegwerfen?</h1>
+                                    <h1>Warum 157.000 Tonnen unnötigen <br> Abfall produzieren?*</h1>
+                                    <a href="https://www.bmnt.gv.at/land/lebensmittel/kostbare_lebensmittel/initiative/die-initiative.html" target="_blank">Quelle - BMNT</a>
+                                    <p>Das bedeutet, dass jede Österreicherin und jeder Österreicher <br><br> im Durchschnitt jährlich 20kg an Essen wegwirft!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-rightarea">
+                                <img src="img/slide/slide-1.png" class="slide-img" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="swiper-slide-container">
+                                    <div class="swiper-slide-leftarea">
+                                            <img src="img/slide/slide-1.png" class="slide-img" draggable="false">
+                                    </div>
+                                    <div class="swiper-slide-rightarea">
+                                            <div style="margin: auto; text-align: center">
+                                                    <h1>Warum gutes Essen wegwerfen?</h1>
+                                                    <h1>Warum 157.000 Tonnen unnötigen <br> Abfall produzieren?*</h1>
+                                                    <a href="https://www.bmnt.gv.at/land/lebensmittel/kostbare_lebensmittel/initiative/die-initiative.html" target="_blank">Quelle - BMNT</a>
+                                                    <p>Das bedeutet, dass jede Österreicherin und jeder Österreicher <br><br> im Durchschnitt jährlich 20kg an Essen wegwirft!</p>
+                                                </div>
+                                        
+                                    </div>
+                                </div>
                     </div>
                     <div class="swiper-slide">
                         
                     </div>
-                    <div class="swiper-slide">
-                        
-                    </div>
-                    ...
                 </div>
-                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
             </div>
         </div>
         <footer>
-            <div id="footer-left">
-                <p>© Samuel Haim - Thomas Kröpfl - David Kuntner - Fabian Spescha</p>
-            </div>
             <div>
-                <p>Made with much <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+                <p>Mit viel Liebe <i class="fas fa-heart"></i> und <i class="fas fa-coffee"></i> @ HTL Dornbirn!</p>
+            </div>
+            <div id="footer-left">
+                <p>Samuel Haim</p>
+                <p>Thomas Kröpfl</p>
+                <p>David Kuntner</p>
+                <p>Fabian Spescha</p>
             </div>
         </footer>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

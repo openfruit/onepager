@@ -16,6 +16,8 @@ window.onload = () => {
 navMenuButton.onclick = toggleNavMenuButton;
 
 function toggleNavMenuButton() {
+    navigator.vibrate([25]);
+
     let navLinks = document.getElementById('nav-links').style;
     if (!navMenuToggled) {
         navMenuToggled = true;
@@ -96,5 +98,7 @@ let mySwiper = new Swiper('.swiper-container', {
     // If we need pagination
     pagination: {
     el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
     },
 });
