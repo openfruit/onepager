@@ -6,16 +6,48 @@ const navMenuButton3 = document.getElementById('nav-link-3');
 const navMenuButton4 = document.getElementById('nav-link-4');
 const navMenuButton5 = document.getElementById('nav-link-5');
 
+function hideNavbarLinksMobile() {
+    let navLinkStyle = document.getElementById('nav-links').style;
+
+    if(window.innerWidth < 992 && navLinkStyle.display == "flex") {
+        navLinkStyle.display = "none";
+    }
+}
+
 navMenuButton1.onclick = () => {
+    hideNavbarLinksMobile();
+
     document.querySelector('#section-1').scrollIntoView({
-        behavior: 'smooth'
-    })
+        behavior: 'smooth',
+        block: 'start'
+    });
 };
 
 navMenuButton2.onclick = () => {
+    hideNavbarLinksMobile();
+
     document.querySelector('#section-2').scrollIntoView({
-        behavior: 'smooth'
+        behavior: 'smooth',
+        block: 'start'
     })
+};
+
+navMenuButton3.onclick = () => {
+    hideNavbarLinksMobile();
+
+    document.querySelector('#section-3').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+};
+
+navMenuButton4.onclick = () => {
+    hideNavbarLinksMobile();
+
+    document.querySelector('#section-4').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
 };
 
 let navMenuToggled = false;
