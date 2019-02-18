@@ -21,8 +21,15 @@ html, body {
 .teaserh2{
     font-family: 'Dosis', sans-serif;
     font-size: 40px;
-    color:#f2f2f2;
+    color:#f8fffe;
     margin-top:0px;
+}
+
+.normalh1{
+    font-size:50px;
+}
+.normalh2{
+    font-size:25px;
 }
 
 ::-webkit-scrollbar {
