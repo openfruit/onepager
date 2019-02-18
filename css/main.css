@@ -3,9 +3,24 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-family: 'Dosis', sans-serif;
     user-select: none;
     scrollbar-width: none;
+}
+
+.teaserh1{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 900;
+    font-size:120px;
+    color:white;
+    margin-bottom: 0px;
+}
+
+.teaserh2{
+    font-family: 'Dosis', sans-serif;
+    font-size: 40px;
+    color:#f2f2f2;
+    margin-top:0px;
 }
 
 ::-webkit-scrollbar {
@@ -164,7 +179,7 @@ html, body {
 
 #section-1 {
     flex-direction: row;
-    background-image: linear-gradient(to bottom, rgba(58, 175, 126,1), rgba(255, 255, 255,0));
+    background-color: #28774F;
     padding: 0 16em;
     padding-top: 4em;
     width: calc(100% - 32em);
