@@ -81,13 +81,10 @@ html, body {
     height: auto;
 }
 
-#phone-shadow {
-    position: absolute;
-    display: flex;
-    top: 0;
-    left: 0;
-    width: 400px;
-    height: auto;
+.phone-shadow {
+    filter: drop-shadow(5px 10px 25px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(5px 10px 25px rgba(0,0,0,0.5));
+    -moz-filter: drop-shadow(5px 10px 25px rgba(0,0,0,0.5));
 }
 
 #navbar {
@@ -160,18 +157,18 @@ html, body {
 
 .section {
     display: flex;
-    width: calc(100% - 12em);
+    width: calc(100% - 24em);
     height: 100%;
-    padding: 0 6em;
+    padding: 0 12em;
 }
 
 #section-1 {
     flex-direction: row;
     background-image: linear-gradient(to bottom, rgba(58, 175, 126,1), rgba(255, 255, 255,0));
-    padding: 0 10em;
-    padding-top: 3em;
+    padding: 0 16em;
+    padding-top: 4em;
+    width: calc(100% - 32em);
     height: calc(100% - 3em);
-    width: calc(100% - 20em);
     justify-content: space-between;
 }
 
