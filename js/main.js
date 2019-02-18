@@ -109,7 +109,7 @@ function navScrollChange() {
         navbarStyle.boxShadow = "";
         
         //Logo Color
-        brandStyle.color = "black";
+        brandStyle.color = "white";
         brandStyle.letterSpacing = "5px";
 
         //Navlink Color
