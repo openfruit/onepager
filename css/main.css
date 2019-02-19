@@ -217,7 +217,7 @@ html, body {
     padding-bottom: 12em;
 }
 
-#section-5 button {
+.button {
     border: 4px solid rgb(58, 175, 126);
     border-radius: 0.5em;
     background-color: rgb(58, 175, 126);
@@ -228,21 +228,21 @@ html, body {
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#section-5 button:hover {
+.button:hover {
     border: 4px solid rgb(58, 175, 126);
     background-color: transparent;
     color: rgb(58, 175, 126);
     cursor: pointer;
 }
 
-#section-5 button:active {
+.button:active {
     border: 4px solid rgb(58, 175, 126);
     background-color: rgb(58, 175, 126);
     color: white;
     cursor: pointer;
 }
 
-#section-5 button p {
+.button p {
     margin: auto;
     font-weight: 700;
     letter-spacing: 2px;
