@@ -12,7 +12,7 @@ html, body {
 .teaserh1{
     font-family: 'Dosis', sans-serif;
     font-weight: 900;
-    font-size:120px;
+    font-size: 56pt;
     color:white;
     margin-top: -100px;
     margin-bottom: 0px;
@@ -106,9 +106,9 @@ html, body {
 }
 
 .phone-shadow {
-    filter: drop-shadow(5px 10px 25px rgba(0,0,0,0.5));
-    -webkit-filter: drop-shadow(5px 10px 25px rgba(0,0,0,0.5));
-    -moz-filter: drop-shadow(5px 10px 25px rgba(0,0,0,0.5));
+    filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.5));
+    -moz-filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.5));
 }
 
 #navbar {
@@ -152,6 +152,8 @@ html, body {
     margin: auto 0.5em;
     border-radius: 0.25em;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    font-weight: 900;
+    font-size: 14pt;
 }
 
 .nav-link:hover {
@@ -171,7 +173,7 @@ html, body {
 }
 
 .headerScroll {
-    color: black !important;
+    color: rgb(90, 90, 90) !important;
 }
 
 .headerScroll:hover {
@@ -202,20 +204,48 @@ html, body {
 
 #section-3 {
     flex-direction: column;
+    padding-top: 3em;
 }
 
 #section-4 {
     
 }
 
+#section-5 {
+    height: auto;
+    flex: 1 1 auto;
+    padding-bottom: 12em;
+}
+
 #section-5 button {
-    height: 3em;
-    border: none;
+    border: 4px solid rgb(58, 175, 126);
     border-radius: 0.5em;
     background-color: rgb(58, 175, 126);
     color: white;
     margin: auto;
     padding: 2em 4em;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#section-5 button:hover {
+    border: 4px solid rgb(58, 175, 126);
+    background-color: transparent;
+    color: rgb(58, 175, 126);
+    cursor: pointer;
+}
+
+#section-5 button:active {
+    border: 4px solid rgb(58, 175, 126);
+    background-color: rgb(58, 175, 126);
+    color: white;
+    cursor: pointer;
+}
+
+#section-5 button p {
+    margin: auto;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .column-section-3 {
@@ -240,8 +270,9 @@ html, body {
 
 .row-section-3-text p {
     margin: auto;
-    font-size: 15pt;
+    font-size: 18pt;
     line-height: 2em;
+    font-weight: 900;
 }
 
 .row-section-3-img {
@@ -343,12 +374,30 @@ footer div {
 footer div p {
     text-align: center;
     margin: 1em;
+    font-size: 11pt;
 }
 
 @media screen and (max-width: 991px) {
     html, body {
         width: 100%;
         height: auto;
+    }
+
+    .normalh1 {
+        zoom: 0.75;
+    }
+
+    .teaserh1 {
+        margin-top: 0.5em;
+        zoom: 0.5;
+        -moz-transform: scale(0.5);
+        -moz-transform-origin: center;
+    }
+
+    .teaserh2 {
+        zoom: 0.5;
+        -moz-transform: scale(0.5);
+        -moz-transform-origin: center;
     }
 
     .section {
@@ -464,6 +513,7 @@ footer div p {
     }
 
     #nav-links {
+        display: none;
         flex-direction: column;
         
     }
@@ -471,6 +521,7 @@ footer div p {
     .nav-link {
         display: block;
         text-align: center;
+        font-size: 12pt;
         margin: 0;
         box-shadow: '' !important;
         color: black;
@@ -489,9 +540,17 @@ footer div p {
         flex: 1 1 auto;
     }
 
+    #section-5 {
+        padding-bottom: 5em;
+    }
+
     footer {
         width: calc(100% - 4em);
         padding: 1em 2em;
+    }
+
+    footer div p {
+        font-size: 10pt;
     }
 }
   

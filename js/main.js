@@ -5,84 +5,75 @@ const navMenuButton2 = document.getElementById('nav-link-2');
 const navMenuButton3 = document.getElementById('nav-link-3');
 const navMenuButton4 = document.getElementById('nav-link-4');
 const navMenuButton5 = document.getElementById('nav-link-5');
-
-function hideNavbarLinksMobile() {
-    let navLinkStyle = document.getElementById('nav-links').style;
-
-    if(window.innerWidth < 992 && navLinkStyle.display == "flex") {
-        navLinkStyle.display = "none";
-    }
-}
-
-navMenuButton1.onclick = () => {
-    hideNavbarLinksMobile();
-
-    document.querySelector('#section-1').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
-};
-
-navMenuButton2.onclick = () => {
-    hideNavbarLinksMobile();
-
-    document.querySelector('#section-2').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    })
-};
-
-navMenuButton3.onclick = () => {
-    hideNavbarLinksMobile();
-
-    document.querySelector('#section-3').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
-};
-
-navMenuButton4.onclick = () => {
-    hideNavbarLinksMobile();
-
-    document.querySelector('#section-4').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
-};
+const navMenuButton = document.getElementById('nav-menu');
 
 let navMenuToggled = false;
 
-const navMenuButton = document.getElementById('nav-menu');
+let navLinkStyle = document.getElementById('nav-links').style;
+let navbarStyle = document.getElementById('navbar').style;
+let brandStyle = document.getElementById('nav-brand').style;
+let navLinks = document.getElementsByClassName('nav-link');
+let navMenuStyle = document.getElementById('nav-menu').style;
 
-window.onscroll = navScrollChange;
+let mySwiper = new Swiper('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+    },
+});
 
-window.onresize = changeMenuStyle;
+function hideNavbarLinksMobile() {
+    if(window.innerWidth < 992 && navLinkStyle.display == "flex") {
+        navLinkStyle.display = "none";
+    } else {
+        return;
+    }
+}
+
+function navMenuButtonClick(navMenuButton, toNavigate) {
+    navMenuButton.onclick = () => {
+        hideNavbarLinksMobile();
+    
+        document.querySelector("#" + toNavigate).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    };
+}
+
+navMenuButtonClick(navMenuButton1, "section-1");
+navMenuButtonClick(navMenuButton2, "section-2");
+navMenuButtonClick(navMenuButton3, "section-3");
+navMenuButtonClick(navMenuButton4, "section-4");
+navMenuButtonClick(navMenuButton5, "section-5");
+
+window.onscroll = () => {navScrollChange()};
+
+window.onresize = () => {changeMenuStyle()};
 
 window.onload = () => {
     navScrollChange()
     changeMenuStyle()
 };
 
-navMenuButton.onclick = toggleNavMenuButton;
+navMenuButton.onclick = () => {toggleNavMenuButton()};
 
 function toggleNavMenuButton() {
     navigator.vibrate([25]);
 
-    let navLinks = document.getElementById('nav-links').style;
     if (!navMenuToggled) {
         navMenuToggled = true;
-        navLinks.display = "flex";
+        navLinkStyle.display = "flex";
     } else {
         navMenuToggled = false;
-        navLinks.display = "none";
+        navLinkStyle.display = "none";
     }
 }
 
 function navScrollChange() {
-    let navbarStyle = document.getElementById('navbar').style;
-    let brandStyle = document.getElementById('nav-brand').style;
-    let navLinks = document.getElementsByClassName('nav-link');
-
     if(window.innerWidth < 992){
         for (let i = 0; i < navLinks.length; i++) {
             navLinks[i].classList.remove('headerScroll');
@@ -120,11 +111,6 @@ function navScrollChange() {
 }
 
 function changeMenuStyle() {
-    let navbarStyle = document.getElementById('navbar').style;
-    let navMenuStyle = document.getElementById('nav-menu').style;
-    let navLinkStyle = document.getElementById('nav-links').style;
-    let brandStyle = document.getElementById('nav-brand').style;
-
     if(window.innerWidth >= 992) {
         navMenuStyle.display = "none";
         navLinkStyle.display = "flex";
@@ -139,16 +125,3 @@ function changeMenuStyle() {
         navbarStyle.padding = "0";
     }
 }
-
-let mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
-    },
-});
