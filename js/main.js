@@ -7,13 +7,21 @@ const navMenuButton4 = document.getElementById('nav-link-4');
 const navMenuButton5 = document.getElementById('nav-link-5');
 const navMenuButton = document.getElementById('nav-menu');
 
+const downloadButton = document.getElementById('download');
+const downloadOptIn = document.getElementById('download-opt-in');
+const dsvgoOptIn = document.getElementById('dsvgo-opt-in');
+
 let navMenuToggled = false;
+let acceptedDsvgo = false;
 
 let navLinkStyle = document.getElementById('nav-links').style;
 let navbarStyle = document.getElementById('navbar').style;
 let brandStyle = document.getElementById('nav-brand').style;
 let navLinks = document.getElementsByClassName('nav-link');
 let navMenuStyle = document.getElementById('nav-menu').style;
+
+let dsvgoDisclaimerStyle = document.getElementById('dsvgo-disclaimer-box').style;
+let optInDownload = document.getElementById('download-opt-in').style;
 
 let mySwiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
@@ -59,7 +67,11 @@ window.onload = () => {
     changeMenuStyle()
 };
 
+downloadButton.onclick = () => {toggleDsvgo()};
+
 navMenuButton.onclick = () => {toggleNavMenuButton()};
+
+dsvgoOptIn.onclick = () => {checkForDsvgoOptIn()};
 
 function toggleNavMenuButton() {
     navigator.vibrate([25]);
@@ -70,6 +82,20 @@ function toggleNavMenuButton() {
     } else {
         navMenuToggled = false;
         navLinkStyle.display = "none";
+    }
+}
+
+function toggleDsvgo() {
+    dsvgoDisclaimerStyle.display = "flex";
+}
+
+function checkForDsvgoOptIn() {
+    acceptedDsvgo = !acceptedDsvgo;
+
+    if(acceptedDsvgo) {
+        optInDownload.display = "block";
+    } else {
+        optInDownload.display = "none";
     }
 }
 
