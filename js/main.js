@@ -93,7 +93,7 @@ function checkForDsvgoOptIn() {
     acceptedDsvgo = !acceptedDsvgo;
 
     if(acceptedDsvgo) {
-        optInDownload.display = "block";
+        optInDownload.display = "inline-flex";
     } else {
         optInDownload.display = "none";
     }

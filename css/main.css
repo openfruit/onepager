@@ -389,12 +389,42 @@ footer div p {
     right: 0;
     bottom: 0;
     z-index: 20;
+    overflow: scroll;
+}
+
+#dsvgo-disclaimer-box div {
+    margin: auto;
+    width: 50%;
+}
+
+#dsvgo-disclaimer-box div p {
+    font-size: 13pt;
+    font-weight: 700;
+    line-height: 2em;
+    letter-spacing: 2px;
+    color: rgb(75, 75, 75);
+    text-align: center;
+}
+
+#dsvgo-disclaimer-box div ol {
+    list-style: decimal inside none;
+    font-size: 13pt;
+    font-weight: 700;
+    line-height: 2em;
+    letter-spacing: 2px;
+    color: rgb(75, 75, 75);
+    text-align: center;
 }
 
 @media screen and (max-width: 991px) {
     #dsvgo-disclaimer-box div {
         zoom: 0.75;
         -moz-transform: scale(0.75);
+        width: 75%;
+    }
+
+    #dsvgo-disclaimer-box div ol {
+        padding: 0;
     }
 
     html, body {
